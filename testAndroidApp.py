@@ -1,3 +1,8 @@
+# Creation Date: February 1st 2019
+# Original Authors: Rohan Rao, Christian Francisco
+# Contents of file: Mocks the microncontroller by sending fake OBD-II values over bluetooth to an android app
+# FOR TESTING PURPOSES ONLY
+
 import bluetooth
 import random
 import time
