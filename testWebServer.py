@@ -1,6 +1,6 @@
-import bluetooth
 import random
 import time 
+import datetime
 
 from socketIO_client_nexus import SocketIO, LoggingNamespace
 
@@ -16,6 +16,8 @@ def getStringRandom():
     data = list()
     for i in range(19):
         data.append(str(random.randint(75, 100)))
+    
+    data.append(str(datetime.datetime.now()))
     return str(",".join(data) + "\n")
 
 
