@@ -48,7 +48,8 @@ def getJSONString():
         "ambientTemperature" : "0",
         "controlModuleVoltage" : "0",
         "fuelLevel" : "0",
-        "dateTimeStamp" : "0"
+        "dateTimeStamp" : "0",
+        "latLng" : {"latitude": "53.631611", "longitude": "-113.323975"}
     }
 
     jsonDict["VIN"] = str(random.randint(75, 100))

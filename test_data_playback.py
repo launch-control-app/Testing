@@ -2,8 +2,9 @@ import bluetooth
 import random
 import time
 
-filename = "test_run_march_3.txt"
-f.open(filename)
+filename = r"test_run_march_3_test.txt"
+filename2 = r"Untitled-1.txt"
+f = open(filename2, 'r')
 
 server_socket= bluetooth.BluetoothSocket(bluetooth.RFCOMM)
 server_socket.bind(("", bluetooth.PORT_ANY))
@@ -24,6 +25,8 @@ while True:
     # Inner loop - send data to client periodically
     for line in f:
         try:
+            if (line == "\n"):
+                continue
             client_socket.send(line)
             print(line)
             time.sleep(0.5)
@@ -32,4 +35,4 @@ while True:
             client_socket.close()
             break
 
-server_socket.close()
+# server_socket.close()
