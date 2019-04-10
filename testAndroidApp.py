@@ -11,8 +11,9 @@ import time
 def getString(counter):
     data = list()
     for i in range(19):
-        data.append(str(random.randint(75, 100)))
-    data[12] = str(counter)
+        #data.append("-999")
+        data.append(str(random.randint(32, 45)))
+    #data[1] = "-999"
     return str(",".join(data) + "\n")
 
 server_socket= bluetooth.BluetoothSocket(bluetooth.RFCOMM)
@@ -45,7 +46,7 @@ while True:
                 counter = 0
             else:
                 counter = 255
-            time.sleep(0.5)
+            time.sleep(0.20)
         except:
             print('Client disconnected')
             client_socket.close()
